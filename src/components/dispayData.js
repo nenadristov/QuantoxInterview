@@ -19,6 +19,7 @@ export default class DisplayData extends React.Component{
             console.log(weatherData.windSpeed)
             for (let i = 0; i < weatherData.days.length; i++) {
                weatherData.days[i].windSpeed = weatherData.days[i].windSpeed*3.6 ;
+               console.log(weatherData.days[i].windSpeed)
                 
                 
             }
@@ -28,7 +29,7 @@ export default class DisplayData extends React.Component{
             console.log(weatherData.windSpeed)
             for (let i = 0; i < weatherData.days.length; i++) {
                 weatherData.days[i].windSpeed = weatherData.days[i].windSpeed/3.6 ;
-                
+                console.log(weatherData.days[i].windSpeed)
                  
              }
         };
@@ -65,8 +66,8 @@ export default class DisplayData extends React.Component{
 
                             <Col onChange={this.tempUnitChange}>
                             <h4>Change temperature unit</h4>
-                            <input type="radio" value="C" name="brzina" /> &deg;C
-                            <input type="radio" value="K" name="brzina" /> &deg;K
+                            <input type="radio" value="C" name="temp" /> &deg;C
+                            <input type="radio" value="K" name="temp" /> &deg;K
                             </Col>
                         </Row>
                     </Container>
@@ -82,7 +83,7 @@ export default class DisplayData extends React.Component{
                         <Accordion.Collapse eventKey="0">
                         <Card.Body>
                             Wind Direction: {day.windDirection} <WeatherArrow direction ={day.windDirection}/><br/>
-                            Wind Speed: {day.windSpeed}<br/>
+                            Wind Speed: {day.windSpeed} {weatherData.windSpeed}<br/>
                             Type: {day.type}
                             
                         </Card.Body>
