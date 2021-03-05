@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -18,8 +16,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -28,11 +26,35 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.naslov{
+  text-align: center;
 }
+
+.WeatherData{
+  color: #000;
+  padding-left: 15%;
+    padding-right: 15%;
+}
+
+.WeatherData .accordion{
+  padding-bottom: 2px;
+}
+.ikona-veter{
+  color:blue;
+}
+
+.ikona-dropdown{
+  float: right;
+}
+
+.promeni-edinici{
+  color: #fff;
+  text-align: center;
+}
+
+.promeni-edinici input[type=radio]{
+  
+  margin-left: 2% !important;
+}
+
+
