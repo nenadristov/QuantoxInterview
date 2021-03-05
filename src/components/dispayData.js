@@ -40,19 +40,15 @@ export default class DisplayData extends React.Component{
             
             for (let i = 0; i < weatherData.days.length; i++) {
                weatherData.days[i].temp = weatherData.days[i].temp+273.15 ;
-               console.log(weatherData.days[i].temp)
-                
-                
+               console.log(weatherData.days[i].temp)  
             }
         }
         else if(event.target.value === 'K'){
             weatherData.tempUnit= 'K';
-            
             for (let i = 0; i < weatherData.days.length; i++) {
                 weatherData.days[i].temp = weatherData.days[i].temp-273.15 ;
                 console.log(weatherData.days[i].temp)
-                 
-             }
+            }
         };
     }
     render() {
